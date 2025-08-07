@@ -1,14 +1,29 @@
-streamlit>=1.37.0
-streamlit-authenticator>=0.4.2
-pandas>=2.0.0
-plotly>=5.17.0
-numpy>=1.24.0
-PyYAML>=6.0
-python-dateutil>=2.8.2
-openpyxl>=3.1.0
+# ============================================================================
+# 📋 requirements.txt - DEPENDÊNCIAS ATUALIZADAS
+# ============================================================================
 
-# Para modelos preditivos (próximas etapas)
+# Streamlit e core
+streamlit>=1.37.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualizações
+plotly>=5.17.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Análise de dados
 scikit-learn>=1.3.0
 statsmodels>=0.14.0
-seaborn>=0.12.0
-matplotlib>=3.7.0
+scipy>=1.11.0
+
+# Manipulação de arquivos
+openpyxl>=3.1.0
+xlrd>=2.0.1
+
+# Utilitários
+python-dateutil>=2.8.2
+pytz>=2023.3
+
+# Opcional: Para APIs futuras
+requests>=2.31.0

@@ -1,151 +1,127 @@
+# ============================================================================
+# 🔐 auth/authentication.py - GERENCIADOR DE AUTENTICAÇÃO LIMPO
+# ============================================================================
+
 import streamlit as st
-import streamlit_authenticator as stauth
-import yaml
-from yaml.loader import SafeLoader
-import os
 from datetime import datetime, timedelta
+from typing import Dict, Optional, Tuple
 import hashlib
 
-class AuthManager:
+class AuthenticationManager:
+    """Gerenciador de autenticação profissional"""
+    
     def __init__(self):
-        self.config_file = 'config/auth_config.yaml'
-        self.config = self.load_config()
-        self.authenticator = self.setup_authenticator()
-    
-    def load_config(self):
-        """Carrega configuração de autenticação"""
-        try:
-            # Tenta carregar do arquivo local primeiro
-            if os.path.exists(self.config_file):
-                with open(self.config_file, 'r', encoding='utf-8') as file:
-                    return yaml.load(file, Loader=SafeLoader)
-            else:
-                # Se não existir, cria configuração padrão
-                return self.create_default_config()
-        except Exception as e:
-            st.error(f"Erro ao carregar configuração: {e}")
-            return self.create_default_config()
-    
-    def create_default_config(self):
-        """Cria configuração padrão de usuários"""
-        # Senhas são hasheadas automaticamente
-        default_config = {
-            'cookie': {
-                'expiry_days': 1,  # Expira em 1 dia por segurança
-                'key': 'auth_key_12345',  # Alterar em produção
-                'name': 'auth_cookie'
+        self.session_timeout_minutes = 30
+        self.users_db = {
+            'admin': {
+                'password_hash': self._hash_password('admin123'),
+                'name': 'Administrador do Sistema',
+                'email': 'admin@empresa.com',
+                'role': 'admin',
+                'companies': ['all'],  # Acesso a todas as empresas
+                'permissions': ['full_access']
             },
-            'credentials': {
-                'usernames': {
-                    'admin': {
-                        'email': 'admin@empresa.com',
-                        'first_name': 'Admin',
-                        'last_name': 'System',
-                        'password': 'admin123',  # Será hasheada
-                        'role': 'admin',
-                        'datasets': ['all']  # Acesso a todos
-                    },
-                    'usuario': {
-                        'email': 'usuario@empresa.com', 
-                        'first_name': 'Usuário',
-                        'last_name': 'Comum',
-                        'password': 'user123',  # Será hasheada
-                        'role': 'user',
-                        'datasets': ['Loja1_dados_unificados.csv']  # Acesso limitado
-                    }
-                }
+            'usuario': {
+                'password_hash': self._hash_password('user123'),
+                'name': 'Usuário Padrão',
+                'email': 'usuario@empresa.com', 
+                'role': 'user',
+                'companies': ['empresa_001'],  # Acesso limitado
+                'permissions': ['read_only']
             }
         }
+    
+    def _hash_password(self, password: str) -> str:
+        """Gera hash da senha"""
+        return hashlib.sha256(password.encode()).hexdigest()
+    
+    def authenticate(self, username: str, password: str) -> Tuple[bool, Optional[Dict]]:
+        """Autentica usuário"""
         
-        # Hashear senhas se necessário
-        for username, user_data in default_config['credentials']['usernames'].items():
-            if isinstance(user_data['password'], str) and len(user_data['password']) < 50:
-                # Senha ainda não foi hasheada
-                user_data['password'] = stauth.Hasher([user_data['password']]).generate()[0]
+        if username in self.users_db:
+            user_data = self.users_db[username]
+            password_hash = self._hash_password(password)
+            
+            if password_hash == user_data['password_hash']:
+                return True, user_data
         
-        # Salvar configuração
-        self.save_config(default_config)
-        return default_config
+        return False, None
     
-    def save_config(self, config):
-        """Salva configuração no arquivo"""
-        try:
-            os.makedirs('config', exist_ok=True)
-            with open(self.config_file, 'w', encoding='utf-8') as file:
-                yaml.dump(config, file, default_flow_style=False, allow_unicode=True)
-        except Exception as e:
-            st.error(f"Erro ao salvar configuração: {e}")
+    def login(self, username: str, user_data: Dict) -> None:
+        """Realiza login do usuário"""
+        st.session_state.update({
+            'authenticated': True,
+            'username': username,
+            'user_data': user_data,
+            'login_time': datetime.now(),
+            'last_activity': datetime.now()
+        })
     
-    def setup_authenticator(self):
-        """Configura o autenticador"""
-        st.write("CONFIG DEBUG:", self.config)
-        try:
-            return stauth.Authenticate(
-                self.config['credentials'],
-                self.config['cookie']['name'],
-                self.config['cookie']['key'],
-                self.config['cookie']['expiry_days']
-            )
-        except Exception as e:
-            st.error(f"Erro ao configurar autenticador: {e}")
-            return None
-    
-    def authenticate(self):
-        """Executa processo de autenticação"""
-        if self.authenticator is None:
-            return None, None, None, None
-
-        try:
-            # Widget de login
-            name, authentication_status, username = self.authenticator.login('Login', 'main')
-
-            # Se autenticado, obter role do usuário
-            role = None
-            if authentication_status and username:
-                role = self.get_user_role(username)
-                # Salvar informações na sessão
-                st.session_state['user_role'] = role
-                st.session_state['username'] = username
-                st.session_state['name'] = name
-                st.session_state['login_time'] = datetime.now()
-
-            return name, authentication_status, username, role
-
-        except Exception as e:
-            st.error(f"Erro na autenticação: {e}")
-            return None, False, None, None
-    
-    def get_user_role(self, username):
-        """Obtém role do usuário"""
-        try:
-            return self.config['credentials']['usernames'][username].get('role', 'user')
-        except:
-            return 'user'
-    
-    def get_user_datasets(self, username):
-        """Obtém datasets permitidos para o usuário"""
-        try:
-            datasets = self.config['credentials']['usernames'][username].get('datasets', [])
-            return datasets
-        except:
-            return []
-    
-    def logout(self):
-        """Executa logout do usuário"""
-        if self.authenticator:
-            self.authenticator.logout('Logout', 'sidebar')
+    def logout(self) -> None:
+        """Realiza logout"""
+        keys_to_clear = [
+            'authenticated', 'username', 'user_data', 
+            'login_time', 'last_activity'
+        ]
         
-        # Limpar sessão
-        keys_to_remove = ['user_role', 'username', 'name', 'login_time']
-        for key in keys_to_remove:
+        for key in keys_to_clear:
             if key in st.session_state:
                 del st.session_state[key]
     
-    def check_session_timeout(self, timeout_minutes=30):
+    def is_authenticated(self) -> bool:
+        """Verifica se usuário está autenticado"""
+        return st.session_state.get('authenticated', False)
+    
+    def get_current_user(self) -> Optional[Dict]:
+        """Retorna dados do usuário atual"""
+        return st.session_state.get('user_data')
+    
+    def get_username(self) -> Optional[str]:
+        """Retorna username atual"""
+        return st.session_state.get('username')
+    
+    def check_session_timeout(self) -> bool:
         """Verifica timeout da sessão"""
-        if 'login_time' in st.session_state:
-            login_time = st.session_state['login_time']
-            if datetime.now() - login_time > timedelta(minutes=timeout_minutes):
-                self.logout()
-                st.error("⏰ Sessão expirada. Faça login novamente.")
-                st.rerun()
+        if 'last_activity' in st.session_state:
+            last_activity = st.session_state['last_activity']
+            timeout = timedelta(minutes=self.session_timeout_minutes)
+            
+            if datetime.now() - last_activity > timeout:
+                return True
+        
+        # Atualizar última atividade
+        st.session_state['last_activity'] = datetime.now()
+        return False
+    
+    def has_permission(self, permission: str) -> bool:
+        """Verifica se usuário tem permissão específica"""
+        user_data = self.get_current_user()
+        if not user_data:
+            return False
+        
+        user_permissions = user_data.get('permissions', [])
+        return permission in user_permissions or 'full_access' in user_permissions
+    
+    def get_accessible_companies(self) -> list:
+        """Retorna empresas acessíveis ao usuário"""
+        user_data = self.get_current_user()
+        if not user_data:
+            return []
+        
+        companies = user_data.get('companies', [])
+        
+        if 'all' in companies:
+            # Retornar todas as empresas disponíveis
+            return self._get_all_companies()
+        else:
+            return companies
+    
+    def _get_all_companies(self) -> list:
+        """Retorna lista de todas as empresas disponíveis"""
+        return [
+            'empresa_001',
+            'empresa_002', 
+            'empresa_003',
+            'empresa_004',
+            'empresa_005'
+        ]

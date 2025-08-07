@@ -1,0 +1,24 @@
+{
+  "loja_001": {
+    "name": "Loja 1",
+    "display_name": "Loja Centro", 
+    "csv_file": "Loja1_dados_unificados.csv",
+    "value_column": "valor_loja_01",
+    "created_date": "2024-01-01",
+    "status": "active",
+    "has_climate_data": true,
+    "description": "Loja principal localizada no centro da cidade",
+    "location": "Centro"
+  },
+  "loja_002": {
+    "name": "Loja 2",
+    "display_name": "Loja Norte",
+    "csv_file": "Loja2_dados_unificados.csv", 
+    "value_column": "valor_loja_02",
+    "created_date": "2024-01-01",
+    "status": "active",
+    "has_climate_data": true,
+    "description": "Filial localizada na zona norte",
+    "location": "Zona Norte"
+  }
+}
