@@ -3,6 +3,11 @@
 # 🧭 core/router.py - ROTEADOR DE PÁGINAS
 # ============================================================================
 
+
+APP_CONFIG = {
+    'debug': False
+}
+
 import streamlit as st
 from typing import Dict, Any
 
