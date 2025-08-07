@@ -1,0 +1,22 @@
+cookie:
+  expiry_days: 1
+  key: "auth_key_12345_change"
+  name: "auth_cookie"
+
+credentials:
+  usernames:
+    admin:
+      email: "admin@empresa.com"
+      first_name: "Admin"
+      last_name: "System"
+      password: "admin123"
+      role: "admin"
+      datasets: ["all"]
+    usuario:
+      email: "usuario@empresa.com"
+      first_name: "Usuário"
+      last_name: "Comum"
+      password: "user123"
+      role: "user"
+      datasets: ["Loja1_dados_unificados.csv"]
+      
