@@ -1,5 +1,6 @@
+
 # ============================================================================
-# 🤖 pages/modelo_preditivo.py - MODELO PREDITIVO INTEGRADO
+# 🤖 pages/modelo_preditivo.py - PÁGINA DO MODELO PREDITIVO CORRIGIDA
 # ============================================================================
 
 import streamlit as st
@@ -13,6 +14,12 @@ import joblib
 from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')
+
+# Importar o modelo preditivo da RAIZ do projeto
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 
 # Importar o modelo preditivo existente
 try:
