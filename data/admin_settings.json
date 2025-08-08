@@ -1,0 +1,20 @@
+{
+  "security": {
+    "session_timeout_minutes": 30,
+    "max_login_attempts": 3,
+    "require_strong_password": false,
+    "enable_2fa": false
+  },
+  "data": {
+    "max_file_size_mb": 100,
+    "backup_frequency": "Manual",
+    "data_retention_days": 365,
+    "auto_cleanup": false
+  },
+  "system": {
+    "log_level": "INFO",
+    "max_logs_entries": 1000,
+    "auto_backup": false,
+    "maintenance_window": "02:00"
+  }
+}

@@ -28,14 +28,14 @@ if current_dir not in sys.path:
 try:
     from auth.auth_system import SimpleAuthenticator
     from data.store_manager import StoreDataManager
-    from pages.admin import AdminPage
-    from pages.dashboard_preditivo import add_prediction_widgets_to_dashboard
+    from paginas.admin import AdminPage
+    from paginas.dashboard_preditivo import add_prediction_widgets_to_dashboard
     
     # Imports das páginas principais
-    from pages.clima_vendas import show_clima_vendas_page
-    from pages.modelo_preditivo import show_modelo_preditivo_page
-    from pages.serie_temporal import show_serie_temporal_page
-    from pages.previsao_climatica import show_previsao_climatica_page
+    from paginas.clima_vendas import show_clima_vendas_page
+    from paginas.modelo_preditivo import show_modelo_preditivo_page
+    from paginas.serie_temporal import show_serie_temporal_page
+    from paginas.previsao_climatica import show_previsao_climatica_page
     
     IMPORTS_OK = True
 except ImportError as e:
