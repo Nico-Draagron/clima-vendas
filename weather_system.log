@@ -1,0 +1,574 @@
+2025-08-08 11:38:26,948 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:26,964 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:27,798 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:27,798 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:28,152 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:28,167 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:28,517 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:28,533 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:28,902 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:28,923 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:29,311 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:29,325 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:29,668 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:29,668 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:30,044 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:30,054 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:30,407 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:30,422 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:30,785 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:30,785 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:31,182 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:31,195 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:31,567 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:31,567 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:31,918 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:31,938 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:32,284 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:32,300 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:32,651 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:32,672 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:33,018 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:33,018 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:33,431 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:33,431 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:33,801 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:33,818 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:34,168 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:34,189 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:34,535 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:34,551 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:34,913 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:34,915 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:35,267 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:35,283 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:35,682 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:35,698 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:36,053 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:36,068 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:36,435 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:36,453 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:36,801 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:36,817 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:37,184 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:37,184 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:37,550 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:37,550 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:37,966 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:37,983 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:38,334 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:38,334 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:38,701 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:38,717 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:39,070 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:39,085 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:39,530 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:39,530 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:39,885 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:39,911 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:40,302 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:40,318 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:40,669 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:40,685 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:41,034 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:41,050 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:41,401 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:41,417 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:41,770 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:41,782 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:42,135 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:42,151 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:42,551 - ERROR - skipping variable: paramId==165 shortName='u10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))
+2025-08-08 11:38:42,567 - ERROR - skipping variable: paramId==166 shortName='v10'
+Traceback (most recent call last):
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 725, in build_dataset_components
+    dict_merge(variables, coord_vars)
+  File "C:\Users\maris\AppData\Roaming\Python\Python311\site-packages\cfgrib\dataset.py", line 641, in dict_merge
+    raise DatasetBuildError(
+cfgrib.dataset.DatasetBuildError: key present and new value is different: key='heightAboveGround' value=Variable(dimensions=(), data=np.float64(2.0)) new_value=Variable(dimensions=(), data=np.float64(10.0))

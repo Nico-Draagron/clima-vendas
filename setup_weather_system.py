@@ -1,8 +1,8 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # ============================================================================
-# 🚀 setup_weather_system.py - INSTALAÇÃO E CONFIGURAÇÃO AUTOMÁTICA
+# SETUP CORRIGIDO PARA WINDOWS - Resolve problema de encoding
 # ============================================================================
-# Script completo para configurar o sistema de previsão climática e vendas
 
 import os
 import sys
@@ -11,30 +11,43 @@ import json
 import shutil
 from pathlib import Path
 from datetime import datetime
+import locale
+
+# Forçar UTF-8 no Windows
+if sys.platform == 'win32':
+    import codecs
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
+
+def safe_write(filepath, content):
+    """Escreve arquivo com encoding UTF-8 seguro"""
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(content)
+    print(f"  ✅ {filepath}")
 
 def print_header():
     """Exibe cabeçalho do instalador"""
     print("\n" + "="*70)
-    print("🌤️  SISTEMA DE PREVISÃO CLIMÁTICA E VENDAS - INSTALADOR")
+    print("SISTEMA DE PREVISAO CLIMATICA E VENDAS - INSTALADOR")
     print("="*70)
-    print("📅 Data:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-    print("🐍 Python:", sys.version.split()[0])
-    print("📂 Diretório:", os.getcwd())
+    print("Data:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    print("Python:", sys.version.split()[0])
+    print("Diretorio:", os.getcwd())
     print("="*70 + "\n")
 
 def check_python_version():
     """Verifica versão do Python"""
-    print("🔍 Verificando versão do Python...")
+    print("Verificando versao do Python...")
     version = sys.version_info
     if version.major < 3 or (version.major == 3 and version.minor < 8):
-        print(f"❌ Python 3.8+ necessário. Versão atual: {version.major}.{version.minor}")
+        print(f"ERRO: Python 3.8+ necessario. Versao atual: {version.major}.{version.minor}")
         return False
-    print(f"✅ Python {version.major}.{version.minor} detectado")
+    print(f"OK: Python {version.major}.{version.minor} detectado")
     return True
 
 def install_dependencies():
     """Instala dependências necessárias"""
-    print("\n📦 Instalando dependências...")
+    print("\nInstalando dependencias...")
     
     # Lista de pacotes essenciais
     essential_packages = [
@@ -49,46 +62,34 @@ def install_dependencies():
         'joblib>=1.3.0'
     ]
     
-    # Tentar instalar cfgrib e suas dependências
-    grib_packages = [
-        'eccodes',  # Necessário para cfgrib
-        'cfgrib>=0.9.10',
-        'xarray>=2023.0.0',
-        'netCDF4>=1.6.0'
-    ]
-    
-    all_packages = essential_packages + grib_packages
-    
-    # Criar requirements.txt temporário
-    with open('temp_requirements.txt', 'w') as f:
-        f.write('\n'.join(all_packages))
+    # Criar requirements temporário
+    safe_write('temp_requirements.txt', '\n'.join(essential_packages))
     
     try:
         # Atualizar pip
-        print("📌 Atualizando pip...")
+        print("Atualizando pip...")
         subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'], 
                       capture_output=True, text=True)
         
         # Instalar pacotes
-        print("📌 Instalando pacotes Python...")
+        print("Instalando pacotes Python...")
         result = subprocess.run(
             [sys.executable, '-m', 'pip', 'install', '-r', 'temp_requirements.txt'],
             capture_output=True, text=True
         )
         
         if result.returncode != 0:
-            print("⚠️ Alguns pacotes não foram instalados. Tentando instalar essenciais...")
-            # Tentar instalar apenas os essenciais
+            print("AVISO: Alguns pacotes nao foram instalados. Tentando instalar essenciais...")
             for pkg in essential_packages:
                 subprocess.run([sys.executable, '-m', 'pip', 'install', pkg],
                              capture_output=True, text=True)
         
-        print("✅ Dependências instaladas")
+        print("OK: Dependencias instaladas")
         return True
         
     except Exception as e:
-        print(f"❌ Erro ao instalar dependências: {e}")
-        print("💡 Tente instalar manualmente com: pip install -r requirements_weather.txt")
+        print(f"ERRO ao instalar dependencias: {e}")
+        print("Tente instalar manualmente com: pip install -r requirements_weather.txt")
         return False
     finally:
         # Limpar arquivo temporário
@@ -97,7 +98,7 @@ def install_dependencies():
 
 def create_directory_structure():
     """Cria estrutura de diretórios"""
-    print("\n📁 Criando estrutura de diretórios...")
+    print("\nCriando estrutura de diretorios...")
     
     directories = [
         'config',
@@ -116,13 +117,13 @@ def create_directory_structure():
     
     for dir_path in directories:
         Path(dir_path).mkdir(parents=True, exist_ok=True)
-        print(f"  ✅ {dir_path}/")
+        print(f"  OK: {dir_path}/")
     
-    print("✅ Estrutura de diretórios criada")
+    print("OK: Estrutura de diretorios criada")
 
 def create_config_files():
     """Cria arquivos de configuração"""
-    print("\n⚙️ Criando arquivos de configuração...")
+    print("\nCriando arquivos de configuracao...")
     
     # Configuração do sistema meteorológico
     weather_config = {
@@ -150,9 +151,9 @@ def create_config_files():
         "auto_update": True
     }
     
-    with open('config/weather_config.json', 'w') as f:
+    with open('config/weather_config.json', 'w', encoding='utf-8') as f:
         json.dump(weather_config, f, indent=2)
-    print("  ✅ config/weather_config.json")
+    print("  OK: config/weather_config.json")
     
     # Configuração do modelo
     model_config = {
@@ -198,9 +199,9 @@ def create_config_files():
         }
     }
     
-    with open('config/model_config.json', 'w') as f:
+    with open('config/model_config.json', 'w', encoding='utf-8') as f:
         json.dump(model_config, f, indent=2)
-    print("  ✅ config/model_config.json")
+    print("  OK: config/model_config.json")
     
     # Configuração do Streamlit
     streamlit_config = """[theme]
@@ -218,19 +219,164 @@ enableXsrfProtection = true
 gatherUsageStats = false
 """
     
-    with open('.streamlit/config.toml', 'w') as f:
-        f.write(streamlit_config)
-    print("  ✅ .streamlit/config.toml")
+    safe_write('.streamlit/config.toml', streamlit_config)
     
-    print("✅ Arquivos de configuração criados")
+    print("OK: Arquivos de configuracao criados")
+
+def create_test_system_script():
+    """Cria o script test_system.py"""
+    print("\nCriando script de teste...")
+    
+    test_script = """#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Script de teste do sistema
+
+import sys
+print("\\nTESTANDO SISTEMA...")
+print("="*50)
+
+# Testar imports
+imports_ok = True
+
+try:
+    import pandas as pd
+    print("OK: pandas")
+except:
+    print("ERRO: pandas")
+    imports_ok = False
+
+try:
+    import numpy as np
+    print("OK: numpy")
+except:
+    print("ERRO: numpy")
+    imports_ok = False
+
+try:
+    import sklearn
+    print("OK: scikit-learn")
+except:
+    print("ERRO: scikit-learn")
+    imports_ok = False
+
+try:
+    import streamlit
+    print("OK: streamlit")
+except:
+    print("ERRO: streamlit")
+    imports_ok = False
+
+try:
+    import requests
+    print("OK: requests")
+except:
+    print("ERRO: requests")
+    imports_ok = False
+
+try:
+    import plotly
+    print("OK: plotly")
+except:
+    print("ERRO: plotly")
+    imports_ok = False
+
+try:
+    import schedule
+    print("OK: schedule")
+except:
+    print("ERRO: schedule")
+    imports_ok = False
+
+try:
+    import cfgrib
+    print("OK: cfgrib")
+except:
+    print("AVISO: cfgrib (opcional para dados GRIB2)")
+
+try:
+    import xarray
+    print("OK: xarray")
+except:
+    print("AVISO: xarray (opcional para dados NetCDF)")
+
+print("="*50)
+if imports_ok:
+    print("SUCESSO: Sistema pronto para uso!")
+else:
+    print("ERRO: Instale as dependencias faltantes")
+    print("Execute: pip install -r requirements_weather.txt")
+"""
+    
+    safe_write('test_system.py', test_script)
+    print("OK: test_system.py criado")
+
+def create_run_system_script():
+    """Cria o script run_system.py"""
+    print("\nCriando script principal...")
+    
+    run_script = """#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Script principal para executar o sistema
+
+import sys
+import os
+
+def main():
+    print("\\nSISTEMA DE PREVISAO CLIMATICA E VENDAS")
+    print("="*50)
+    print("\\nEscolha o modulo para executar:")
+    print("1. Sistema de Download NOMADS")
+    print("2. Modelo Preditivo")
+    print("3. Dashboard Streamlit")
+    print("4. Atualizacao Automatica")
+    print("5. Teste do Sistema")
+    
+    choice = input("\\nOpcao: ").strip()
+    
+    if choice == '1':
+        try:
+            from sistema_previsao_climatica import main
+            main()
+        except ImportError:
+            print("ERRO: sistema_previsao_climatica.py nao encontrado")
+    elif choice == '2':
+        try:
+            from modelo_preditivo_integrado import main
+            main()
+        except ImportError:
+            print("ERRO: modelo_preditivo_integrado.py nao encontrado")
+    elif choice == '3':
+        os.system('streamlit run streamlit_app.py')
+    elif choice == '4':
+        try:
+            from sistema_previsao_climatica import WeatherDataManager, WeatherAutomation
+            manager = WeatherDataManager()
+            automation = WeatherAutomation(manager)
+            automation.schedule_updates()
+            print("Sistema de automacao iniciado. Ctrl+C para parar.")
+            automation.start_scheduler()
+        except ImportError:
+            print("ERRO: sistema_previsao_climatica.py nao encontrado")
+    elif choice == '5':
+        os.system('python test_system.py')
+    else:
+        print("Opcao invalida")
+
+if __name__ == "__main__":
+    main()
+"""
+    
+    safe_write('run_system.py', run_script)
+    print("OK: run_system.py criado")
 
 def copy_existing_files():
     """Copia arquivos existentes para os locais corretos"""
-    print("\n📂 Organizando arquivos existentes...")
+    print("\nOrganizando arquivos existentes...")
     
     # Lista de arquivos para copiar/mover
     file_mappings = {
         'dowload_modelo.py': 'NOMADS/download_modelo.py',
+        'download_modelo.py': 'NOMADS/download_modelo.py',  # Caso tenha corrigido o nome
         'scripty.py': 'NOMADS/process_grib.py',
         'modelo_preditivo.py': 'models/modelo_preditivo_original.py',
         'data/datasets/Loja1_dados_unificados.csv': 'data/datasets/Loja1_dados_unificados.csv'
@@ -243,388 +389,129 @@ def copy_existing_files():
                 os.makedirs(dest_dir, exist_ok=True)
             
             if source != dest:
-                shutil.copy2(source, dest)
-                print(f"  ✅ Copiado: {source} → {dest}")
+                try:
+                    shutil.copy2(source, dest)
+                    print(f"  OK: Copiado {source} -> {dest}")
+                except Exception as e:
+                    print(f"  AVISO: Erro ao copiar {source}: {e}")
         else:
-            print(f"  ⚠️ Não encontrado: {source}")
+            print(f"  INFO: Nao encontrado: {source}")
 
-def create_main_scripts():
-    """Cria scripts principais"""
-    print("\n📝 Criando scripts principais...")
+def create_sample_data():
+    """Cria arquivo de dados de exemplo se não existir"""
+    sample_file = 'data/datasets/Loja1_dados_unificados.csv'
     
-    # Script principal de execução
-    run_script = """#!/usr/bin/env python
-# Script principal para executar o sistema
-
-import sys
-import os
-
-def main():
-    print("\\n🌤️ SISTEMA DE PREVISÃO CLIMÁTICA E VENDAS")
-    print("="*50)
-    print("\\nEscolha o módulo para executar:")
-    print("1. 🌍 Sistema de Download NOMADS")
-    print("2. 🤖 Modelo Preditivo")
-    print("3. 📊 Dashboard Streamlit")
-    print("4. 🔄 Atualização Automática")
-    
-    choice = input("\\nOpção: ").strip()
-    
-    if choice == '1':
-        from sistema_previsao_climatica import main
-        main()
-    elif choice == '2':
-        from modelo_preditivo_integrado import main
-        main()
-    elif choice == '3':
-        os.system('streamlit run streamlit_app.py')
-    elif choice == '4':
-        from sistema_previsao_climatica import WeatherDataManager, WeatherAutomation
-        manager = WeatherDataManager()
-        automation = WeatherAutomation(manager)
-        automation.schedule_updates()
-        print("⏰ Sistema de automação iniciado. Ctrl+C para parar.")
-        automation.start_scheduler()
-    else:
-        print("❌ Opção inválida")
-
-if __name__ == "__main__":
-    main()
-"""
-    
-    with open('run_system.py', 'w') as f:
-        f.write(run_script)
-    print("  ✅ run_system.py")
-    
-    # Script de teste rápido
-    test_script = """#!/usr/bin/env python
-# Script de teste do sistema
-
-import sys
-print("\\n🧪 TESTANDO SISTEMA...")
-print("="*50)
-
-# Testar imports
-imports_ok = True
-
-try:
-    import pandas as pd
-    print("✅ pandas")
-except:
-    print("❌ pandas")
-    imports_ok = False
-
-try:
-    import numpy as np
-    print("✅ numpy")
-except:
-    print("❌ numpy")
-    imports_ok = False
-
-try:
-    import sklearn
-    print("✅ scikit-learn")
-except:
-    print("❌ scikit-learn")
-    imports_ok = False
-
-try:
-    import streamlit
-    print("✅ streamlit")
-except:
-    print("❌ streamlit")
-    imports_ok = False
-
-try:
-    import cfgrib
-    print("✅ cfgrib")
-except:
-    print("⚠️ cfgrib (opcional)")
-
-try:
-    import xarray
-    print("✅ xarray")
-except:
-    print("⚠️ xarray (opcional)")
-
-print("="*50)
-if imports_ok:
-    print("✅ Sistema pronto para uso!")
-else:
-    print("❌ Instale as dependências faltantes")
-"""
-    
-    with open('test_system.py', 'w') as f:
-        f.write(test_script)
-    print("  ✅ test_system.py")
-    
-    print("✅ Scripts principais criados")
-
-def create_documentation():
-    """Cria documentação do sistema"""
-    print("\n📚 Criando documentação...")
-    
-    readme = """# 🌤️ Sistema de Previsão Climática e Vendas
-
-## 📋 Descrição
-Sistema profissional e automatizado para download de dados meteorológicos do NOMADS/GFS,
-processamento avançado e integração com modelo preditivo de vendas.
-
-## 🚀 Instalação Rápida
-```bash
-python setup_weather_system.py
-```
-
-## 📦 Componentes Principais
-
-### 1. Sistema de Previsão Climática (`sistema_previsao_climatica.py`)
-- Download automático de dados NOMADS/GFS
-- Processamento de arquivos GRIB2
-- Geração de relatórios
-- Automação com agendamento
-
-### 2. Modelo Preditivo Integrado (`modelo_preditivo_integrado.py`)
-- Múltiplos algoritmos de ML
-- Engenharia de features avançada
-- Validação temporal
-- Intervalos de confiança
-
-### 3. Dashboard Streamlit (`streamlit_app.py`)
-- Interface web interativa
-- Visualizações em tempo real
-- Controle de modelos
-- Exportação de dados
-
-## 🎯 Uso Básico
-
-### Executar Sistema Completo
-```bash
-python run_system.py
-```
-
-### Download de Dados NOMADS
-```python
-from sistema_previsao_climatica import WeatherDataManager
-
-manager = WeatherDataManager()
-manager.run_automatic_update()
-```
-
-### Treinar Modelo
-```python
-from modelo_preditivo_integrado import ModeloVendasClimaticoAvancado
-
-modelo = ModeloVendasClimaticoAvancado()
-df = modelo.load_and_prepare_data()
-modelo.train(df)
-```
-
-### Dashboard Web
-```bash
-streamlit run streamlit_app.py
-```
-
-## ⚙️ Configuração
-
-### Localização (config/weather_config.json)
-Ajuste as coordenadas para sua região:
-```json
-{
-    "location": {
-        "lat_min": -29.73,
-        "lat_max": -29.63,
-        "lon_min": 306.47,
-        "lon_max": 306.57,
-        "city": "Agudo",
-        "state": "RS"
-    }
-}
-```
-
-### Modelo (config/model_config.json)
-Configure algoritmos e parâmetros:
-```json
-{
-    "models": {
-        "random_forest": {
-            "enabled": true,
-            "params": {
-                "n_estimators": 200
+    if not os.path.exists(sample_file):
+        print("\nCriando arquivo de dados de exemplo...")
+        try:
+            import pandas as pd
+            import numpy as np
+            
+            dates = pd.date_range('2024-01-01', periods=365, freq='D')
+            data = {
+                'data': dates,
+                'temp_max': np.random.uniform(20, 35, 365),
+                'temp_min': np.random.uniform(10, 25, 365),
+                'temp_media': np.random.uniform(15, 30, 365),
+                'precipitacao_total': np.random.exponential(5, 365),
+                'umid_mediana': np.random.uniform(40, 90, 365),
+                'valor_loja_01': np.random.uniform(40000, 60000, 365)
             }
-        }
-    }
-}
-```
+            df = pd.DataFrame(data)
+            df.to_csv(sample_file, index=False)
+            print(f"  OK: Arquivo de exemplo criado: {sample_file}")
+        except Exception as e:
+            print(f"  AVISO: Nao foi possivel criar arquivo de exemplo: {e}")
 
-## 📊 Estrutura de Dados
-
-### Entrada (CSV)
-- data: YYYY-MM-DD
-- temp_max, temp_min, temp_media
-- precipitacao_total
-- umid_mediana
-- valor_loja_01
-
-### Saída
-- Previsões com intervalos de confiança
-- Relatórios em JSON/Excel
-- Gráficos interativos
-
-## 🔄 Automação
-
-O sistema pode ser configurado para:
-- Baixar dados automaticamente (00, 06, 12, 18 UTC)
-- Processar e integrar com vendas
-- Retreinar modelos periodicamente
-- Enviar alertas
-
-## 📈 Métricas de Performance
-
-- R² Score > 0.85
-- RMSE < 10% do valor médio
-- MAPE < 15%
-- Cross-validation com Time Series Split
-
-## 🐛 Troubleshooting
-
-### Erro ao instalar cfgrib
-```bash
-conda install -c conda-forge cfgrib eccodes
-```
-
-### Erro de memória
-Reduza o número de features ou use amostragem.
-
-### Dados não baixam
-Verifique conexão e disponibilidade do NOMADS.
-
-## 📞 Suporte
-- Logs em: logs/weather_system.log
-- Teste com: python test_system.py
-
-## 📝 Licença
-MIT License
-
----
-Desenvolvido com ❤️ para previsão climática e análise de vendas
-"""
+def final_tests():
+    """Executa testes finais"""
+    print("\nExecutando testes finais...")
     
-    with open('README.md', 'w') as f:
-        f.write(readme)
-    print("  ✅ README.md")
-    
-    print("✅ Documentação criada")
-
-def setup_cron_job():
-    """Configura tarefa agendada (Linux/Mac)"""
-    if sys.platform != 'win32':
-        print("\n⏰ Configurando agendamento automático...")
+    # Verificar se test_system.py existe
+    if os.path.exists('test_system.py'):
+        print("  OK: test_system.py existe")
         
-        cron_command = f"0 1,7,13,19 * * * cd {os.getcwd()} && {sys.executable} sistema_previsao_climatica.py"
-        
-        print(f"  📝 Adicione ao crontab (crontab -e):")
-        print(f"     {cron_command}")
-        
-        with open('cron_setup.txt', 'w') as f:
-            f.write(cron_command)
-        print("  ✅ Comando salvo em cron_setup.txt")
-
-def final_setup():
-    """Configurações finais e teste"""
-    print("\n🔧 Executando configurações finais...")
-    
-    # Criar arquivo de exemplo se não existir
-    if not os.path.exists('data/datasets/Loja1_dados_unificados.csv'):
-        print("  📊 Criando arquivo de exemplo...")
-        import pandas as pd
-        import numpy as np
-        
-        dates = pd.date_range('2024-01-01', periods=365, freq='D')
-        data = {
-            'data': dates,
-            'temp_max': np.random.uniform(20, 35, 365),
-            'temp_min': np.random.uniform(10, 25, 365),
-            'temp_media': np.random.uniform(15, 30, 365),
-            'precipitacao_total': np.random.exponential(5, 365),
-            'umid_mediana': np.random.uniform(40, 90, 365),
-            'valor_loja_01': np.random.uniform(40000, 60000, 365)
-        }
-        df = pd.DataFrame(data)
-        df.to_csv('data/datasets/Loja1_dados_unificados.csv', index=False)
-        print("  ✅ Arquivo de exemplo criado")
-    
-    # Testar importação dos módulos principais
-    print("\n🧪 Testando módulos...")
-    try:
-        exec(open('test_system.py').read())
-    except Exception as e:
-        print(f"  ⚠️ Erro no teste: {e}")
-    
-    print("\n✅ Setup concluído!")
+        # Tentar executar
+        try:
+            result = subprocess.run([sys.executable, 'test_system.py'], 
+                                  capture_output=True, text=True, timeout=10)
+            if result.returncode == 0:
+                print("  OK: Teste executado com sucesso")
+                print(result.stdout)
+            else:
+                print("  AVISO: Teste retornou erro")
+                if result.stderr:
+                    print(result.stderr)
+        except subprocess.TimeoutExpired:
+            print("  AVISO: Teste demorou muito para executar")
+        except Exception as e:
+            print(f"  AVISO: Erro ao executar teste: {e}")
+    else:
+        print("  ERRO: test_system.py nao encontrado")
 
 def main():
     """Função principal do instalador"""
     print_header()
     
-    # Verificações e instalação
+    # Lista de etapas
     steps = [
         ("Verificando Python", check_python_version),
-        ("Instalando dependências", install_dependencies),
-        ("Criando diretórios", create_directory_structure),
-        ("Criando configurações", create_config_files),
+        ("Instalando dependencias", install_dependencies),
+        ("Criando diretorios", create_directory_structure),
+        ("Criando configuracoes", create_config_files),
+        ("Criando script de teste", create_test_system_script),
+        ("Criando script principal", create_run_system_script),
         ("Organizando arquivos", copy_existing_files),
-        ("Criando scripts", create_main_scripts),
-        ("Criando documentação", create_documentation),
-        ("Setup final", final_setup)
+        ("Criando dados de exemplo", create_sample_data),
+        ("Testes finais", final_tests)
     ]
     
     success = True
     for step_name, step_func in steps:
+        print(f"\n{step_name}...")
         try:
             result = step_func()
             if result == False:
                 success = False
-                print(f"⚠️ {step_name} teve problemas")
+                print(f"AVISO: {step_name} teve problemas")
         except Exception as e:
-            print(f"❌ Erro em {step_name}: {e}")
+            print(f"ERRO em {step_name}: {e}")
             success = False
-    
-    # Configuração de cron se não for Windows
-    if sys.platform != 'win32':
-        setup_cron_job()
     
     # Resumo final
     print("\n" + "="*70)
-    print("📊 RESUMO DA INSTALAÇÃO")
+    print("RESUMO DA INSTALACAO")
     print("="*70)
     
     if success:
-        print("✅ Sistema instalado com sucesso!")
-        print("\n🚀 PRÓXIMOS PASSOS:")
-        print("1. Configure sua localização em: config/weather_config.json")
+        print("SUCESSO: Sistema instalado com sucesso!")
+        print("\nPROXIMOS PASSOS:")
+        print("1. Configure sua localizacao em: config/weather_config.json")
         print("2. Execute o sistema: python run_system.py")
         print("3. Ou acesse o dashboard: streamlit run streamlit_app.py")
-        print("\n💡 DICAS:")
-        print("- Veja a documentação em README.md")
-        print("- Logs salvos em logs/weather_system.log")
+        print("\nDICAS:")
         print("- Teste o sistema com: python test_system.py")
+        print("- Logs salvos em logs/weather_system.log")
     else:
-        print("⚠️ Instalação concluída com avisos")
+        print("AVISO: Instalacao concluida com avisos")
         print("Verifique os erros acima e tente corrigir manualmente")
-        print("\n💡 SOLUÇÕES COMUNS:")
-        print("- Instale dependências manualmente: pip install -r requirements_weather.txt")
+        print("\nSOLUCOES COMUNS:")
+        print("- Instale dependencias: pip install pandas numpy scikit-learn streamlit")
         print("- Para cfgrib, use conda: conda install -c conda-forge cfgrib")
-        print("- Verifique permissões de escrita nos diretórios")
+        print("- Verifique permissoes de escrita nos diretorios")
     
     print("\n" + "="*70)
-    print("🌤️ Obrigado por usar o Sistema de Previsão Climática!")
+    print("Obrigado por usar o Sistema de Previsao Climatica!")
     print("="*70 + "\n")
+    
+    input("Pressione ENTER para finalizar...")
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n\n⚠️ Instalação cancelada pelo usuário")
+        print("\n\nAVISO: Instalacao cancelada pelo usuario")
     except Exception as e:
-        print(f"\n❌ Erro fatal: {e}")
-        print("Tente executar com privilégios de administrador")
+        print(f"\nERRO FATAL: {e}")
+        print("Tente executar com privilegios de administrador")
+        input("Pressione ENTER para sair...")
