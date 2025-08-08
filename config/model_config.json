@@ -1,0 +1,53 @@
+{
+  "models": {
+    "random_forest": {
+      "enabled": true,
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 15,
+        "min_samples_split": 5,
+        "random_state": 42
+      }
+    },
+    "gradient_boosting": {
+      "enabled": true,
+      "params": {
+        "n_estimators": 150,
+        "max_depth": 7,
+        "learning_rate": 0.1,
+        "random_state": 42
+      }
+    }
+  },
+  "features": {
+    "weather_features": [
+      "temp_media",
+      "temp_max",
+      "temp_min",
+      "precipitacao_total",
+      "umid_mediana",
+      "pressao_media",
+      "vento_vel_media"
+    ],
+    "engineered_features": [
+      "temp_range",
+      "temp_squared",
+      "feels_like",
+      "humidity_temp_interaction",
+      "weather_score"
+    ],
+    "lag_features": {
+      "enabled": true,
+      "lags": [
+        1,
+        7,
+        14
+      ]
+    }
+  },
+  "validation": {
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "bootstrap_samples": 50
+  }
+}

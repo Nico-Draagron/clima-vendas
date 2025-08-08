@@ -1,0 +1,37 @@
+{
+  "base_dir": "C:\\Users\\maris\\Desktop\\clima-vendas",
+  "location": {
+    "lat_min": -29.73,
+    "lat_max": -29.63,
+    "lon_min": 306.47,
+    "lon_max": 306.57,
+    "city": "Agudo",
+    "state": "RS"
+  },
+  "variables": [
+    "TMP",
+    "TMAX",
+    "TMIN",
+    "UGRD",
+    "VGRD",
+    "RH",
+    "APCP",
+    "PRES",
+    "DSWRF",
+    "TCDC"
+  ],
+  "levels": [
+    "2_m_above_ground",
+    "10_m_above_ground",
+    "surface",
+    "mean_sea_level"
+  ],
+  "forecast_hours": 120,
+  "update_times": [
+    "00",
+    "06",
+    "12",
+    "18"
+  ],
+  "auto_update": true
+}

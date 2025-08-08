@@ -1,7 +1,11 @@
 # ============================================================================
 # 🤖 modelo_preditivo.py - BACKEND DO MODELO PREDITIVO
 # ============================================================================
-# Este arquivo deve estar na RAIZ do projeto, não na pasta pages/
+try:
+    from modelo_preditivo_bridge import ModeloPreditivoUnificado
+    MODEL_AVAILABLE = True
+except ImportError:
+    MODEL_AVAILABLE = False
 
 import pandas as pd
 import numpy as np
